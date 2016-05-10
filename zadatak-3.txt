@@ -1,0 +1,56 @@
+Sa sajta http://147.91.128.71:9090/parlament/
+
+Osnovni URL API-ja je: http://147.91.128.71:9090/parlament/api/?
+
+Primer URL-a: http://147.91.128.71:9090/parlament/api/members koji vraca rezultat u JSON formatu:
+
+[
+	{
+		meta: {
+			href: "http://147.91.128.71:9090/parlament/api/members/12411"
+		},
+	id: 12411,
+	name: "Dragan",
+	lastName: "Aćimović",
+	gender: "m",
+	biography: "Rođen je 1976. godine. Po zanimanju je preduzetnik. Živi u Banovom Polju u opštini Bogatić.",
+	parties: [
+				{
+					meta: {
+						href: "http://147.91.128.71:9090/parlament/api/parties/430"
+					},
+					id: 430,
+					title: "Srpska radikalna stranka - SRS",
+					members: "http://147.91.128.71:9090/parlament/api/parties/430/members"
+				}
+			]
+	},
+	{
+		meta: {
+			href: "http://147.91.128.71:9090/parlament/api/members/189778"
+		},
+		id: 189778,
+		name: "Nevena",
+		lastName: "Adžemović",
+		birthDate: "01.01.1982.",
+		placeOfResidence: "Beograd",
+		gender: "f",
+		biography: "Rođena je 1982. godine u Beogradu. Po zanimanju je ekonomista. U javnosti je poznata kao nekadašnja članica dens grupe “Models”. Autor je knjige ”Kako sačuvati srpski rod”, u kojoj piše o borbi protiv bele kuge. Razvedena, majka jednog deteta.",
+		parties: [
+					{
+						meta: {
+							href: "http://147.91.128.71:9090/parlament/api/parties/446"
+						},
+						id: 446,
+						title: "Nova Srbija - NS",
+						members: "http://147.91.128.71:9090/parlament/api/parties/446/members"
+					}
+				]
+	}
+]
+
+Broj poslanika za vracanje se moze podesiti query parametrom limit, sledi primer URL-a za 5 poslanika:
+
+http://147.91.128.71:9090/parlament/api/members?limit=5
+
+celokupna dokumentacija dostupna na: http://147.91.128.71:9090/parlament/docs.html
